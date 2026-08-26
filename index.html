@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ระบบบริหารจัดการข้อมูล สำนักงานแรงงานจังหวัด</title>
+  
+  <link rel="manifest" href="./manifest.json">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#5B21B6">
+  <meta name="apple-mobile-web-app-title" content="ระบบแรงงานจังหวัด">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #5B21B6;
+    }
+    iframe {
+      border: none; width: 100%; height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe src="https://script.google.com/macros/s/AKfycbzMahNpSXqhWgmHIbr2oiEEm4htkqIAvT5cbm_kJ9R01riA9fk6fFLaDoPolpkzp5YAWA/exec"></iframe>
+
+  <script>
+    // ลงทะเบียน Service Worker เพื่อให้ผ่านเกณฑ์ PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker ลงทะเบียนสำเร็จ!', reg))
+          .catch(err => console.log('Service Worker เกิดข้อผิดพลาด:', err));
+      });
+    }
+  </script>
+</body>
+</html>
