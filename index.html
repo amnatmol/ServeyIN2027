@@ -25,15 +25,22 @@
 
   <iframe src="https://script.google.com/macros/s/AKfycbxKuogtFL2CaPcwaB70MrKiCUUgJh0atb-OpOVBYw7atAHkA2jg0MkKUW4G6SnWTJhi/exec"></iframe>
 
-  <script>
-    // ลงทะเบียน Service Worker เพื่อให้ผ่านเกณฑ์ PWA
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('Service Worker ลงทะเบียนสำเร็จ!', reg))
-          .catch(err => console.log('Service Worker เกิดข้อผิดพลาด:', err));
-      });
-    }
-  </script>
+ <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker สำเร็จ!'))
+        .catch(err => console.log('Service Worker ล้มเหลว:', err));
+    });
+  }
+
+  // ดักจับอีเวนต์เพื่อเปิดให้ติดตั้ง PWA
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    console.log('พร้อมสำหรับการติดตั้ง PWA');
+  });
+</script>
 </body>
 </html>
