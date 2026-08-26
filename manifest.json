@@ -1,15 +1,15 @@
 {
   "name": "ดัชนีความเชื่อมั่นด้านแรงงาน จังหวัดอำนาจเจริญ",
   "short_name": "สำนักงานแรงงานจังหวัดอำนาจเจริญ",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#4a154b",
   "theme_color": "#6f42c1",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "590x590",
-      "type": "image/png"
+      "type": "./image/png"
     }
   ]
 }
