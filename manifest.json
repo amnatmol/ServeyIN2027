@@ -1,6 +1,6 @@
 {
-  "name": "ดัชนีความเชื่อมั่นด้านแรงงาน จังหวัดอำนาจเจริญ",
-  "short_name": "สำนักงานแรงงานจังหวัดอำนาจเจริญ",
+  "name": "ระบบติดตามการปฏิบัติงาน อสร.อำนาจเจริญ",
+  "short_name": "อสร.อำนาจเจริญ",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#4a154b",
@@ -8,8 +8,15 @@
   "icons": [
     {
       "src": "./icon-192.png",
-      "sizes": "590x590",
-      "type": "./image/png"
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-192.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
