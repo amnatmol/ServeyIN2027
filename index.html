@@ -3,35 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>ดัชนีความเชื่อมันด้านแรงงาน จังหวัดอำนาจเจริญ</title>
+  <title>ระบบบริหารจัดการข้อมูล สำนักงานแรงงานจังหวัด</title>
   
   <link rel="manifest" href="./manifest.json">
-  
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#5B21B6">
   <meta name="apple-mobile-web-app-title" content="ระบบแรงงานจังหวัด">
   <link rel="apple-touch-icon" href="./icon-192.png">
 
-  <style>
-    body, html {
-      margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #5B21B6;
-    }
-    iframe {
-      border: none; width: 100%; height: 100%;
-    }
-  </style>
+  <script>
+    // สั่งเปิดไปยัง Apps Script โดยตรง
+    window.location.replace("https://script.google.com/macros/s/AKfycbyGRvVjulght_HAyFVs9V8hhdiRnWXf36H1kyXIvQ4B258oc19jAzSq6HHOMh-kd0hI/exec");
+  </script>
 </head>
 <body>
-
-  <iframe src="https://script.google.com/macros/s/AKfycbz7sAbb6y-ZTGDwCR4WOyO0xJ3W0HzNV_xRTXryyW4RRF0vkWhGhtE7Gid0feR8-m0j/exec"></iframe>
-
   <script>
-    // ลงทะเบียน Service Worker เพื่อให้ผ่านเกณฑ์ PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('Service Worker ลงทะเบียนสำเร็จ!', reg))
-          .catch(err => console.log('Service Worker เกิดข้อผิดพลาด:', err));
+          .then(reg => console.log('Service Worker Registered!', reg))
+          .catch(err => console.log('Service Worker Error:', err));
       });
     }
   </script>
